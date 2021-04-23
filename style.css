@@ -15,6 +15,7 @@ body{
     width: 82%;
     height: 100%;
     border: black 5px solid;
+    position: relative;
 }
 #place{
     width: 100%;
