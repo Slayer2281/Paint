@@ -1,18 +1,41 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Создано https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows
+# Отредактируйте на https://www.toptal.com/developers/gitignore?templates=visualstudiocode,windows
 
-# Other files and folders
-.settings/
+# ## VisualStudioCode ###
+.vscode / *
+! .vscode / tasks.json
+! .vscode / launch.json
+* .code-рабочая область
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# ## Патч VisualStudioCode ###
+# Игнорировать всю локальную историю файлов
+.history
+.ionide
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# ## Windows ###
+# Файлы кэша эскизов Windows
+Thumbs.db
+Thumbs.db: шифруемый
+ehthumbs.db
+ehthumbs_vista.db
+
+# Файл дампа
+* .stackdump
+
+# Файл конфигурации папки
+[ Dd ] esktop.ini
+
+# Корзина, используемая в общих файловых ресурсах
+$ RECYCLE.BIN /
+
+# Файлы установщика Windows
+* .cab
+* .msi
+* .msix
+* .msm
+* .msp
+
+# Ярлыки Windows
+* .lnk
+
+# Конец https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows
