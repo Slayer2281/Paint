@@ -1,3 +1,24 @@
 html{
     text-align: center;
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+#con{
+    margin: auto;
+    width: 82%;
+    height: 100%;
+    border: black 5px solid;
+}
+#place{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    cursor:pointer ;
 }
