@@ -1,41 +1,41 @@
-# Создано https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows
-# Отредактируйте на https://www.toptal.com/developers/gitignore?templates=visualstudiocode,windows
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,windows
 
-# ## VisualStudioCode ###
-.vscode / *
-! .vscode / tasks.json
-! .vscode / launch.json
-* .code-рабочая область
+### VisualStudioCode ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
 
-# ## Патч VisualStudioCode ###
-# Игнорировать всю локальную историю файлов
+### VisualStudioCode Patch ###
+# Ignore all local history of files
 .history
 .ionide
 
-# ## Windows ###
-# Файлы кэша эскизов Windows
+### Windows ###
+# Windows thumbnail cache files
 Thumbs.db
-Thumbs.db: шифруемый
+Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
-# Файл дампа
-* .stackdump
+# Dump file
+*.stackdump
 
-# Файл конфигурации папки
-[ Dd ] esktop.ini
+# Folder config file
+[Dd]esktop.ini
 
-# Корзина, используемая в общих файловых ресурсах
-$ RECYCLE.BIN /
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Файлы установщика Windows
-* .cab
-* .msi
-* .msix
-* .msm
-* .msp
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-# Ярлыки Windows
-* .lnk
+# Windows shortcuts
+*.lnk
 
-# Конец https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows
