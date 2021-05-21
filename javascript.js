@@ -71,7 +71,7 @@ function changeTool(){
 button_clean.addEventListener("click",resetBackground)
 
 function resetBackground(){
-    ctx.clearRect(0,0, cnv.width, cnv.height)
+    ctx.clearRect(0,0, cnv.width, cnv.height);
     ctx.fillStyle = background.value;
     ctx.fillRect(0, 0, cnv.width, cnv.height);
 }
