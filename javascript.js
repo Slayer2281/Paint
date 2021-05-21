@@ -5,6 +5,7 @@ let background = document.getElementById("background");
 let width = 30;
 let tool = "Кисточка";
 let button = document.getElementById("tool");
+let button_clean = document.getElementById("clean");
 
 let displayWidth = cnv.clientWidth;
 let displayHeight = cnv.clientHeight;
@@ -65,4 +66,12 @@ function changeTool(){
         btn.textContent = "Кисточка";
         tool = "Кисточка";
     }
+}
+
+button_clean.addEventListener("click",resetBackground)
+
+function resetBackground(){
+    ctx.clearRect(0,0, cnv.width, cnv.height)
+    ctx.fillStyle = background.value;
+    ctx.fillRect(0, 0, cnv.width, cnv.height);
 }
