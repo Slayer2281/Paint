@@ -1,13 +1,13 @@
-let cnv = document.getElementById("canvas");
-let cnv_bg = document.getElementById("bg_layer");
+let cnv = document.getElementById("canvas");//рисование         
+let cnv_bg = document.getElementById("bg_layer");//задник
 let ctx = cnv.getContext("2d");
 let ctx_bg = cnv_bg.getContext("2d");
-let color = document.getElementById("color").value;
-let background = document.getElementById("background");
-let width = 30;
-let tool = "Кисточка";
-let button = document.getElementById("tool");
-let button_clean = document.getElementById("clean");
+let color = document.getElementById("color").value;//цвет кисти
+let background = document.getElementById("background");//выбор фона 
+let width = 30;//толщина кисти      
+let tool = "Кисточка";//инструмент
+let button = document.getElementById("tool");// кнопка смены инструмента
+let button_clean = document.getElementById("clean");//очистка холста
 
 let displayWidth = cnv.clientWidth;
 let displayHeight = cnv.clientHeight;
@@ -31,8 +31,10 @@ document.getElementById("size").oninput = function(){
 document.getElementById("save_image").onclick = function(){
     let cnv_save = document.getElementById("save_images");
     let ctx_save = cnv_save.getContext("2d");
-    ctx_save.drawImage(cnv,0,0)
-    ctx_save.drawImage(cnv_bg,0,0)
+    cnv_save.width = displayWidth;
+    cnv_save.height = displayHeight;
+    ctx_save.drawImage(cnv,0,0,cnv.width,cnv.height)
+    ctx_save.drawImage(cnv_bg,0,0,cnv.width,cnv.height)
     let image = cnv_save.toDataURL("image/jpg");
     this.href = image;
 }
@@ -48,14 +50,24 @@ cnv.onmousedown = (e) => {
         };
     }, 1);
     if(tool == "Кисточка")
-                ctx.fillStyle = color;
-            else
-                ctx.fillStyle = background.value;
+            ctx.fillStyle = color;
+    else
+        ctx.fillStyle = background.value;
     ctx.fillRect(e.offsetX - width/2, e.offsetY- width/2, width, width);
     cnv.onmouseup = () => {
         cnv.onmousemove = null;
     };
 }
+cnv.ontouchmove = (event)=>{
+    if(tool == "Кисточка"){
+        ctx.fillStyle = color;
+        ctx.fillRect(event.changedTouches[0].pageX-width/2,event.changedTouches[0].pageY-width/2, width,width); 
+
+    }else{
+        ctx.fillRect(event.changedTouches[0].pageX-width/2,event.changedTouches[0].pageY-width/2,width,width);
+    };
+    }
+
 
 background.addEventListener('input', changeBackground);
 
